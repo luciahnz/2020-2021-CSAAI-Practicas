@@ -3,11 +3,11 @@ body {
     padding: 5px;  /* relleno */
     margin: 10px;  /* Margen */
     border: solid;
-    border-color: red;
+    border-color: blueviolet;
   }
   
   /*  Propiedades de la caja del párrafo */
-  p {
+  h3 {
     margin: 10px;
     padding: 10px; /* Relleno */
     border:solid;
