@@ -1,14 +1,11 @@
 /* Para hacer el estilo */ 
 
 
-/* Para color fondo */
 body {
-    background-color: lightblue;
-    color: blue;
-  }
 
-
-/* Para color letras */
-  h1  {
-    color: white;
-  }
+  background-color: blueviolet;
+  color: blue;
+}
+h1 {
+  color: chartreuse;
+}
