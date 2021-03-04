@@ -1,3 +1,11 @@
+
+/* COLOR PALABRA CURRICULUM*/
+
+h1 {
+    color: rgb(170, 20, 207);
+  }
+
+
 /* Propiedades de la caja del cuerpo */
 body {
     padding: 5px;  /* relleno */
