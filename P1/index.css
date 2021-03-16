@@ -12,9 +12,11 @@ body {
     margin: 10px;  /* Margen */
     border: solid;
     border-color: blueviolet;
+    
   }
-body {
-    background-image: url(h2o.jpg);
+
+body  {
+    background-image: url(mapa1.jpg);
     background-image: no-repeat;
     background-image: fixed;
     background-image: center;
@@ -22,14 +24,16 @@ body {
     -o-background-size: cover;
     background-size: cover;
     width: 100%; height: 100%;
+
 }
+
   /*  Propiedades de la caja del párrafo */
-  h3 {
+h3 {
     margin: 10px;
     padding: 10px; /* Relleno */
     border:solid;
     border-color: rgb(241, 228, 103);
-  }
+}
 
 <div class="Imagen">
   <img src="Principal_curriculum.png" alt="Foto" width="300px"  ;>
