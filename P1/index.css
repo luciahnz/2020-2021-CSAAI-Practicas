@@ -13,7 +13,16 @@ body {
     border: solid;
     border-color: blueviolet;
   }
-  
+body {
+    background-image: url(h2o.jpg);
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%; height: 100%;
+}
   /*  Propiedades de la caja del párrafo */
   h3 {
     margin: 10px;
