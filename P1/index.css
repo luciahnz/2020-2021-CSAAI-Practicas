@@ -27,6 +27,12 @@ body  {
 
 }
 
+#derecha {
+  float: right;
+  width: 47%;
+  margin: 1px;
+}
+
   /*  Propiedades de la caja del párrafo */
 h3 {
     margin: 10px;
@@ -39,3 +45,5 @@ h3 {
   <img src="Principal_curriculum.png" alt="Foto" width="300px"  ;>
   <br>
 </div>
+
+
