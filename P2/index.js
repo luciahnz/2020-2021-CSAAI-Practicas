@@ -1,8 +1,8 @@
 console.log("Ejecutando JS...");
 
 display = document.getElementById("display")
-suma = document.getElementById("suma")
-igual = document.getElementById("igual")
+suma = document.getElementById("+")
+igual = document.getElementById("=")
 clear = document.getElementById("clear")
 
 //-- Estados de la calculadora
