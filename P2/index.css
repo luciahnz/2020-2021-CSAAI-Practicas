@@ -7,17 +7,17 @@ body{
   
   #display{
     width: 600px;
-    border-radius: 20px;
+    border-radius: 200px;
     margin: auto;
     float: center;
   }
   button{
-    width: 45px;
-    height: 45px;
+    width: 70px;
+    height: 70px;
     background-color: rgb(118, 35, 227);
     color: #ffffff;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 200px 200px 200px 200px;
     border: solid;
       }
 
