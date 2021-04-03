@@ -19,7 +19,20 @@ body{
     border-radius: 20px 20px 20px 20px;
     border: solid;
       }
-  button:hover {
-     background-color: #000200;
-     color: rgb(247, 2, 2);
+
+  p{
+    width: 400px;
+    height: 40px;
+    border-color: black;
+    background-color: #ff9933;
+    opacity: 0.75;
+    color: #5c2704;
+    font-family: Verdana;
+    font-size: 30px;
+    border-radius: 15px 5px 15px 5px;
+    text-align: right;
+    margin: 25px;
+    float: center;
+    margin-left: auto;
+    margin-right: auto;
   }
