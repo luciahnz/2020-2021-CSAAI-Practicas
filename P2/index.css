@@ -16,9 +16,15 @@ body{
     height: 70px;
     background-color: rgb(118, 35, 227);
     color: #ffffff;
+    font-size: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 200px 200px 200px 200px;
     border: solid;
+    text-align: right;
+    margin: 25px;
+    float: center;
+    margin-left: auto;
+    margin-right: auto;
       }
 
   p{
@@ -28,7 +34,7 @@ body{
     background-color: #ffffff;
     opacity: 0.75;
     color: #1100ff;
-    font-family: Verdana;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
     border-radius: 15px 5px 15px 5px;
     text-align: right;
