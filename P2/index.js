@@ -65,7 +65,7 @@ for (let boton of digitos) {
 //-------- Resto de funciones de retrollamada
 
 //-- Operación de sumar
-suma.onclick = (ev) => {
+suma.onclick += (ev) => {
 
     //-- Insertar simbolo de sumar
     display.innerHTML += ev.target.value;

@@ -2,15 +2,7 @@
 body{
     border: none;
     background-color: #8bd1b0;
-    width: 400px;
-    height: 40px;
-    font-size: 30px;
-    border-radius: 15px 5px 15px 5px;
-    text-align: right;
-    margin: 25px;
-    float: center;
-    margin-left: auto;
-    margin-right: auto;
+    
   }
   
   #display{
@@ -33,9 +25,9 @@ body{
     width: 400px;
     height: 40px;
     border-color: black;
-    background-color: #ff9933;
+    background-color: #6dff33;
     opacity: 0.75;
-    color: #5c2704;
+    color: #fcfcfc;
     font-family: Verdana;
     font-size: 30px;
     border-radius: 15px 5px 15px 5px;
