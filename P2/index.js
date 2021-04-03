@@ -2,6 +2,7 @@ console.log("Ejecutando JS...");
 
 display = document.getElementById("display")
 suma = document.getElementById("+")
+resta = document.getElementById("-")
 igual = document.getElementById("=")
 clear = document.getElementById("clear")
 
@@ -71,6 +72,20 @@ suma.onclick = (ev) => {
     display.innerHTML += ev.target.value;
 
     //-- ¡Ojo! Aquí se inserta el + siempre!
+    //-- Para que la calculadora funcione bien
+    //-- sólo se debe permitir insertar el operador
+    //-- en el estado OP1, y debe cambiar el estado
+    //-- a OPERATION (según el diagrama de estados)
+  
+}
+
+//-- Operación de restar
+resta.onclick = (ev) => {
+
+    //-- Insertar simbolo de resta
+    display.innerHTML -= ev.target.value;
+
+    //-- ¡Ojo! Aquí se inserta el - siempre!
     //-- Para que la calculadora funcione bien
     //-- sólo se debe permitir insertar el operador
     //-- en el estado OP1, y debe cambiar el estado
