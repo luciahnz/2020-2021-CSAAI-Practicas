@@ -1,98 +1,75 @@
 console.log("Ejecutando JS...");
-
-display = document.getElementById("display")
-suma = document.getElementById("suma")
-igual = document.getElementById("igual")
-clear = document.getElementById("clear")
-
-//-- Estados de la calculadora
-const ESTADO = {
-    INIT: 0,
-    OP1: 1,
-    OPERATION: 2,
-    OP2: 3
+ //Función que coloca el número presionado
+ function darNumero(numero){
+    if(num1==0 && num1 !== '0.'){
+        num1 = numero;
+    }else{
+        num1 += numero;
+    }
+    refrescar();
 }
- 
- //-- Variable de estado de la calculadora
- //-- Al comenzar estamos en el estado incial
- let estado = ESTADO.INIT;   
 
-//-- Función de retrollamada de los digitos
-function digito(ev)
-{
-    //-- Se ha recibido un dígito
-    //-- Según en qué estado se encuentre la calculadora
-    //-- se hará una cosa u otra
+//Función que coloca la coma al presionar dicho botón
+function darComa(){
+    if(num1 == 0) {
+        num1 = '0.';
+    } else if(num1.indexOf('.') == -1) {
+        num1 += '.';
+    }
+    refrescar();
+}
 
-    //-- Si es el primer dígito, no lo añadimos,
-    //-- sino que lo mostramos directamente en el display
-    if (estado == ESTADO.INIT) {
-
-        display.innerHTML = ev.target.value;
-
-        //-- Pasar al siguiente estado
-        estado = ESTADO.OP1;
-
-    } else {
-       
-        //--En cualquier otro estado lo añadimos
-        display.innerHTML += ev.target.value;
-
-        //-- Y nos quedamos en el mismo estado
-        //-- Ojo! Este ejemplo sólo implementa el primer
-        //-- estado del diagrama. Habría que tener en 
-        //-- cuenta el resto... lo debes hacer en tu práctica
-    } 
-    
+//Función que coloca la C al presionar dicho botón
+function darC(){
+    num1 = 0;
+    num2 = 0;
+    refrescar();
 }
 
 
-//-- Obtener una colección con todos los elementos
-//-- de la clase digito
-digitos = document.getElementsByClassName("digito")
-
-//-- Establecer la misma función de retrollamada
-//-- para todos los botones de tipo dígito
-for (let boton of digitos) {
-
-    //-- Se ejecuta cuando se pulsa un boton
-    //-- que es un dígito. Para que el código sea 
-    //-- mas legible la función de retrollamada se
-    //-- escribe como una función normal (digito)
-    boton.onclick = digito;
+//Esta función realiza las distintas operaciones aritméticas en función del botón pulsado
+function operar(valor){
+    if (num1 == 0){
+        num1 = parseFloat(document.getElementById("valor_numero").value);
+    }
+    num2 = parseFloat(num1);
+    num1= 0;
+    opera = valor;
 }
 
-//-------- Resto de funciones de retrollamada
+//Función para pulsar igual
+    /*
+    suma = 1
+    resta = 2
+    multiplicacion = 3
+    division = 4
+    potencia = 5
+*/
 
-//-- Operación de sumar
-suma.onclick = (ev) => {
-
-    //-- Insertar simbolo de sumar
-    display.innerHTML += ev.target.value;
-
-    //-- ¡Ojo! Aquí se inserta el + siempre!
-    //-- Para que la calculadora funcione bien
-    //-- sólo se debe permitir insertar el operador
-    //-- en el estado OP1, y debe cambiar el estado
-    //-- a OPERATION (según el diagrama de estados)
-  
+function esIgual(){
+    num1 = parseFloat(num1);
+    switch (opera){
+        case 1:
+            num1 += num2;
+        break;
+        case 2:
+            num1 = num2 - num1;
+        break;
+        case 3:
+            num1 *= num2;
+        break;
+        case 4:
+            num1 = num2 / num1;
+        break;
+        case 5:
+            num1 = Math.pow(num2, num1);
+        break;
+    }
+    refrescar();
+    num2 = parseFloat(num1);
+    num1 = 0;
 }
 
-//-- Evaluar la expresion
-igual.onclick = () => {
-  
-    //-- Calcular la expresión y añadirla al display
-    display.innerHTML = eval(display.innerHTML);
-
-    //-- ¡Ojo! Aquí se hace siempre!
-    //-- Sólo se debe permitar que eso se haga
-    //-- si se está en el estado final (OP2)
-  
-}
-
-//-- Poner a cero la expresion
-//-- Y volver al estado inicial
-clear.onclick = () => {
-  display.innerHTML = "0";
-  estado = ESTADO.INIT;
+function refrescar(){
+    document.getElementById("valor_numero").value = num1;
 }
