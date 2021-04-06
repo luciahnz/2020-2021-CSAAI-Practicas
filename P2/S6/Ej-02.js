@@ -14,10 +14,10 @@ const ctx = canvas.getContext("2d");
 ctx.beginPath();
   //-- Definir un rectangulo de dimensiones 100x50,
   //-- cuya esquina superior izquierda está en (5,5)
-  ctx.rect(5,5, 100, 50);
+  ctx.rect(20,5, 100, 50);
 
   //-- Color de relleno del rectángulo
-  ctx.fillStyle = 'blue';
+  ctx.fillStyle = 'red';
 
   //-- Mostrar el relleno
   ctx.fill();
