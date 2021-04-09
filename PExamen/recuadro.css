@@ -1,15 +1,12 @@
 /* Propiedades de la caja del cuerpo */
 body {
-    padding: 5px;  /* relleno */
-    margin: 10px;  /* Margen */
+    padding: 50px;  /* relleno */
+    margin: 100px;  /* Margen */
+    text-align: center;
     border: solid;
+    font-family: 'Times New Roman', Times, serif;
     border-color: red;
+    color: blueviolet;
+    content
   }
   
-  /*  Propiedades de la caja del párrafo */
-  p {
-    margin: 10px;
-    padding: 10px; /* Relleno */
-    border:solid;
-    border-color: blue;
-  }

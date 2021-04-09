@@ -1,0 +1,106 @@
+
+body {
+    padding: 5px;  /* relleno */
+    margin: 10px;  /* Margen */
+    border-color: blueviolet;
+    background-color: blueviolet;
+    height: 100%;
+}
+
+#Texto{
+    float: right;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    
+  }
+
+#Resumen{
+    background-color: rgba(230, 132, 132, 0.712);
+    width: 28%;
+    margin: 50px;
+    margin-right: 0px;
+    float: left;
+    border-radius: 0px;
+    padding: 38px;
+    border: solid;
+    border-color: rgb(88, 86, 86);
+    margin-top: 7px;
+}
+ 
+    
+
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: currentColor;
+    border: solid;
+    border-color: rgb(88, 86, 86);
+    margin-left: 320px;
+    margin-right: 320px;
+    margin-top: 45px;
+    
+}
+
+
+
+
+h2{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(54, 54, 54);
+}
+
+#Cuadro1{
+    
+    margin-right: 37px;
+    margin-left: 45px;
+    margin-bottom: -14px;
+    margin-top: -5px;
+    text-align: center; 
+    border-radius: 0px;
+    padding: 38px; 
+    border: solid; 
+    border-color: rgb(88, 86, 86);
+    
+}
+
+
+
+#Foto{
+    display:block;
+    text-align: center; 
+}
+
+#Datos{
+    margin: 5px;
+    text-align: left;
+    margin-bottom: -32px;
+}
+
+
+#Personalidad{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+#Cuadro2{
+    background-color: rgba(230, 132, 132, 0.712);
+    width: 50%;
+    margin: 74px;
+    margin-top: 28px;
+    margin-left: 529px;
+    border-radius: 0px;
+    padding: 38px;
+    border: solid;
+    border-color: rgb(88, 86, 86);
+}
+
+    
+    
+
+
+
+#Informacion{
+    margin: 35px;
+}
