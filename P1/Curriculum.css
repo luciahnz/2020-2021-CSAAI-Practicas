@@ -1,9 +1,20 @@
+header {
+    background: url("ok.jpg") repeat-x;
+    width: 100%;
+    text-align: center;
+    width: 84%;
+    text-align: center;
+    margin: -43px;
+    margin-top: 1px;
+    padding: 85px;
+    margin-left: 2px;
+    margin-bottom: -51px;
+  }
 
 body {
-    padding: 5px;  /* relleno */
-    margin: 10px;  /* Margen */
-    border-color: blueviolet;
-    background-color: blueviolet;
+    padding: 5px;  
+    margin: 10px;  
+    background-color: rgb(171, 117, 221);
     height: 100%;
 }
 
@@ -11,7 +22,7 @@ body {
     float: right;
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.8);
-    
+
     padding-block-end: 40px;
   }
 
@@ -19,14 +30,12 @@ body {
     background-color: rgba(230, 132, 132, 0.712);
     width: 28%;
     margin: 50px;
-    /*! margin-right: 0px; */
     float: left;
     border-radius: 0px;
     padding: 38px;
     border: solid;
     border-color: rgb(88, 86, 86);
-    margin-top: 1px;
-    /*! margin-bottom: -25px; */
+    margin-top: 29px;
     padding-block-end: 29px;
     padding-top: 20px;
 }
@@ -39,9 +48,9 @@ h1{
     color: currentColor;
     border: solid;
     border-color: rgb(88, 86, 86);
-    margin-left: 320px;
-    margin-right: 320px;
-    margin-top: 45px;
+    margin-left: 310px;
+    margin-right: 300px;
+    margin-top: 2px;
     background-color: #ffedf3;
     font-size: 49px;
 }
@@ -68,21 +77,20 @@ h3{
     font-size: 30px;
 }
 
+h4{
+    /*! text-align: center; */
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(54, 54, 54);
+    font-size: 20px;
+    margin-top: 0px;
+}
+
 p{
 
 
 }
 
 br{
-
-    
-    /*! background-color: #ffedf3; */
-    /*! font-family: inherit; */
-    /*! margin-left: -68px; */
-    /*! margin-right: 177px; */
-    /*! margin-top: 5px; */
-    /*! margin-bottom: -11px; */
-    /*! text-align: center; */
     font-size: 5px;
 }
 
