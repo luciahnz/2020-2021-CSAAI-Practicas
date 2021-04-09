@@ -25,7 +25,7 @@ body {
     padding: 38px;
     border: solid;
     border-color: rgb(88, 86, 86);
-    margin-top: 7px;
+    margin-top: 1px;
     /*! margin-bottom: -25px; */
     padding-block-end: 29px;
     padding-top: 20px;
@@ -42,8 +42,8 @@ h1{
     margin-left: 320px;
     margin-right: 320px;
     margin-top: 45px;
-    
     background-color: #ffedf3;
+    font-size: 49px;
 }
 
 
@@ -53,20 +53,51 @@ h2{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     color: rgb(54, 54, 54);
+    font-size: 39px;
+    margin-top: 0px;
 }
+
+h3{
+    background-color: #ffedf3;
+    font-family: inherit;
+    margin-left: -68px;
+    margin-right: 177px;
+    margin-top: 5px;
+    margin-bottom: -11px;
+    text-align: center;
+    font-size: 30px;
+}
+
+p{
+
+
+}
+
+br{
+
+    
+    /*! background-color: #ffedf3; */
+    /*! font-family: inherit; */
+    /*! margin-left: -68px; */
+    /*! margin-right: 177px; */
+    /*! margin-top: 5px; */
+    /*! margin-bottom: -11px; */
+    /*! text-align: center; */
+    font-size: 5px;
+}
+
 
 #Cuadro1{
     
     margin-right: 12px;
     margin-left: 13px;
-    margin-bottom: -9px;
-    margin-top: 7px;
+    margin-bottom: 38px;
+    margin-top: 9px;
     text-align: center; 
-    border-radius: 0px;
+    /*! border-radius: 0px; */
     padding: 38px; 
     border: solid; 
-    border-color: rgb(88, 86, 86);
-    
+    border-color: rgb(88, 86, 86); 
     background-color: #f3e6f4d1;
     padding-inline-end: -16px;
     padding-bottom: 45px;
@@ -79,17 +110,12 @@ h2{
 }
 
 #Iconos{
-    
-    /*! width: 29%; */
-    /*! display: block; */
-    padding-block-end: -7px;
-    margin-top: 16px;
+    margin-top: 17px;
+    margin-bottom: 27px;
 }
 
 .Icono{
     width: 12%;
-    margin: 0;
-    padding: 0;
     background:#974545ba;
 }
 
@@ -101,10 +127,16 @@ h2{
 #Datos{
     margin: 11px;
     text-align: left;
-    margin-bottom: -52px;
+    margin-bottom: -26px;
     padding-bottom: 0px;
-    margin-top: -10px;
+    margin-top: -4px;
+    margin-left: -12px;
 }
+
+::marker {
+    color: #974545ba;
+    font-size: 1.25em;
+  }
 
 
 #Personalidad{
