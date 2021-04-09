@@ -12,19 +12,23 @@ body {
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.8);
     
+    padding-block-end: 40px;
   }
 
 #Resumen{
     background-color: rgba(230, 132, 132, 0.712);
     width: 28%;
     margin: 50px;
-    margin-right: 0px;
+    /*! margin-right: 0px; */
     float: left;
     border-radius: 0px;
     padding: 38px;
     border: solid;
     border-color: rgb(88, 86, 86);
     margin-top: 7px;
+    /*! margin-bottom: -25px; */
+    padding-block-end: 42px;
+    padding-top: 20px;
 }
  
     
@@ -39,6 +43,7 @@ h1{
     margin-right: 320px;
     margin-top: 45px;
     
+    background-color: #ffedf3;
 }
 
 
@@ -52,19 +57,24 @@ h2{
 
 #Cuadro1{
     
-    margin-right: 37px;
-    margin-left: 45px;
+    margin-right: 12px;
+    margin-left: 13px;
     margin-bottom: -14px;
-    margin-top: -5px;
+    margin-top: 7px;
     text-align: center; 
     border-radius: 0px;
     padding: 38px; 
     border: solid; 
     border-color: rgb(88, 86, 86);
     
+    background-color: #f3e6f4d1;
 }
 
-
+.Imagen{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 #Foto{
     display:block;
@@ -81,26 +91,53 @@ h2{
 #Personalidad{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
+    /*! padding: -30px; */
+    margin: 14px;
 }
 
 
 #Cuadro2{
     background-color: rgba(230, 132, 132, 0.712);
     width: 50%;
-    margin: 74px;
     margin-top: 28px;
     margin-left: 529px;
+    margin-bottom: -16px;
     border-radius: 0px;
-    padding: 38px;
+    padding: 43px;
     border: solid;
     border-color: rgb(88, 86, 86);
+    margin-bottom: 12px;
 }
 
-    
-    
 
 
 
 #Informacion{
-    margin: 35px;
+    margin: 25px;
+    margin-top: -19px;
+    margin-bottom: -19px;
 }
+
+
+.video{
+    width: 34%;
+    margin: 27px;      
+    margin-left: 53px;
+    margin-top: -268px;
+}
+
+#Cuadro3{
+    background-color: rgba(230, 132, 132, 0.712);
+    width: 86.3%;
+    margin-top: -2px;
+    margin-left: 52px;
+    margin-bottom: -16px;
+    border-radius: 0px;
+    padding: 43px;
+    border: solid;
+    border-color: rgb(88, 86, 86);
+    margin-bottom: 12px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
