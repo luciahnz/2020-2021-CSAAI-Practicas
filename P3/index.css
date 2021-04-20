@@ -1,7 +1,12 @@
-Escenario {
-    background-color: rgb(196, 140, 186);
+canvas {
+    background-color: rgba(211, 160, 202, 0.932);
     border-style: solid;
     border-width: 1px;
     border-color: black;
     border-radius: 5px;
+    margin-left: 320px;
   }
+
+h1{
+    text-align: center;
+}
