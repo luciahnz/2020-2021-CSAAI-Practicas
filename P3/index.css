@@ -3,10 +3,15 @@ canvas {
     border-style: solid;
     border-width: 1px;
     border-color: black;
-    border-radius: 5px;
-    margin-left: 320px;
+    /*! border-radius: 5px; */
+    margin-left: 475px;
+    /*! text-align: center; */
   }
 
 h1{
     text-align: center;
+     
+}
+body{
+  background-color: rgb(233, 216, 162);
 }
