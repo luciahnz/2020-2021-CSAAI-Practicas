@@ -7,7 +7,7 @@ canvas.width = 400;
 canvas.height = 500;
 
 
-//-- PALA IZQ
+//-- PALA 
 const ctx = canvas.getContext("2d");
 ctx.beginPath();
   ctx.rect(170,465, 70, 10);
@@ -16,7 +16,7 @@ ctx.beginPath();
   ctx.stroke();
 ctx.closePath();
 
-
+//-- LADRILLOS
 ctx.beginPath();
   ctx.rect(20,20, 40, 20);
   ctx.rect(65,20, 40, 20);
@@ -67,4 +67,15 @@ ctx.beginPath();
   ctx.fill();
   ctx.stroke();
 
+ctx.closePath();
+
+//-- PELOTA
+
+ctx.beginPath();
+  ctx.arc(205,350, 6, 0, 2 * Math.PI); 
+
+  ctx.fillStyle = 'black';
+  
+  
+  ctx.fill();
 ctx.closePath();

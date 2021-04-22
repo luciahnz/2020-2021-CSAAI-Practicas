@@ -4,12 +4,35 @@ canvas {
     border-width: 1px;
     border-color: black; 
     margin-left: 475px;
+    /*! border: 61px; */
   }
 
 h1{
-    text-align: center;
-     
+    text-align: center;  
 }
+h2{
+  text-align: center;
+   
+  /*! padding-top: 0px; */
+  /*! margin-block-start: -19px; */
+  margin-bottom: 135px;
+  margin-top: -10px;
+}
+
+#Texto{
+  
+  background-color:pink;
+  width: 16%;
+  padding: 43px;
+  border: solid; 
+  border-color: rgb(88, 86, 86);
+  float: right;
+  margin-right: 90px;
+   
+  padding-bottom: 0px;
+  border-radius: 30px;
+}
+
 body{
   background-color: rgb(233, 216, 162);
 }
