@@ -16,7 +16,7 @@ ctx.beginPath();
   ctx.stroke();
 ctx.closePath();
 
-
+//-- LADRILLOS
 ctx.beginPath();
   ctx.rect(20,20, 40, 20);
   ctx.rect(65,20, 40, 20);
