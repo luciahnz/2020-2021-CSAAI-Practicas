@@ -1,12 +1,10 @@
   
-body{
-    border: none;
-    background-color: #8bd1b0;
-    
+body{ 
+    background: url("fondo.jpg") 
   }
   
   #display{
-    width: 600px;
+    width: 330px;
     border-radius: 200px;
     font-size: 30px;
     border-radius: 15px 5px 15px 5px;
@@ -15,6 +13,7 @@ body{
     float: center;
     margin-left: auto;
     margin-right: auto;
+    float: center;
   }
   button{
     width: 70px;
@@ -42,4 +41,19 @@ body{
     float: center;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #Numeros{
+    
+  width: 25%;
+  text-align: center;
+  margin-left: 480px;
+  padding-top: 20px;
+  background-color: #e27cfff7;
+  border-radius: 36px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  margin-top: 121px;
+  margin-bottom: 30px;
   }

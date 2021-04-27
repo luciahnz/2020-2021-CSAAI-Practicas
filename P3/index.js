@@ -66,6 +66,7 @@ ctx.beginPath();
   ctx.fillStyle = 'pink'
   ctx.fill();
   ctx.stroke();
+  
 ctx.closePath();
 
 //-- PELOTA
