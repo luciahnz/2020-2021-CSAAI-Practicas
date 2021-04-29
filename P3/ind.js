@@ -27,13 +27,12 @@ function draw() {
     //-- Constantes de los ladrillos
 const LADRILLO = {
   F: 6,  // Filas
-  C: 12,  // Columnas
-  w: 40,
-  h: 20,
-  origen_x: 20,
-  origen_y: 20,
+  C: 7,  // Columnas
+  w: 72,
+  h: 35,
   padding: 10,
-  visible: true
+  visible: true,
+  invisible: false
 };
 
 //-- Estructura de los ladrillos
@@ -43,8 +42,9 @@ for (let i = 0; i < LADRILLO.F; i++) {
   ladrillos[i] = [];
   for (let j = 0; j < LADRILLO.C; j++) {
     ladrillos[i][j] = {
-        x: (LADRILLO.w + LADRILLO.padding) * j,
-        y: (LADRILLO.h + LADRILLO.padding) * i,
+        
+        x: (LADRILLO.w + LADRILLO.padding) * j + 15,
+        y: (LADRILLO.h + LADRILLO.padding) * i +15,
         w: LADRILLO.w,
         h: LADRILLO.h,
         padding: LADRILLO.padding,
@@ -126,6 +126,8 @@ function animacion()
       bola_x >= raq_x && bola_x <=(raq_x+50)) {
     bola_vy = bola_vy * -1;
   }
+
+  
 
  
 
