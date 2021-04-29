@@ -79,3 +79,11 @@ ctx.beginPath();
   
   ctx.fill();
 ctx.closePath();
+
+
+let vidas = 5;
+let puntos = 0;
+let play_button = document.getElementById("play");
+let izq_button = document.getElementById("izq");
+let der_button = document.getElementById("der");
+
