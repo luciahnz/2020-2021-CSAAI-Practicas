@@ -1,19 +1,30 @@
-const canvas = document.getElementById("canvas");
+console.log("Ejecutando JS...");
 
-canvas.width = 300;
-canvas.height = 100;
+const canvas = document.getElementById("Escenario");
 
+//-- ESCENARIO
+canvas.width = 400;
+canvas.height = 500;
+
+
+//-- PALA IZQ
 const ctx = canvas.getContext("2d");
+ctx.beginPath();
+  ctx.rect(170,465, 70, 10);
+  ctx.fillStyle = 'black';
+  ctx.fill();
+  ctx.stroke();
+ctx.closePath();
 
 //-- Constantes de los ladrillos
 const LADRILLO = {
-    F: 10,  // Filas
-    C: 5,  // Columnas
-    w: 30,
+    F: 8,  // Filas
+    C: 8,  // Columnas
+    w: 40,
     h: 20,
-    origen_x: 0,
-    origen_y: 0,
-    padding: 5,
+    origen_x: 20,
+    origen_y: 20,
+    padding: 10,
     visible: true
 };
 
@@ -34,7 +45,7 @@ for (let i = 0; i < LADRILLO.F; i++) {
     }
 }
 
-ladrillos[0][0].visible = false;
+//--ladrillos[0][0].visible = false;
 
 
 //-- Dibujar ladrillos
@@ -45,9 +56,28 @@ for (let i = 0; i < LADRILLO.F; i++) {
       if (ladrillos[i][j].visible) {
         ctx.beginPath();
         ctx.rect(ladrillos[i][j].x, ladrillos[i][j].y, LADRILLO.w, LADRILLO.h);
-        ctx.fillStyle = 'blue';
+        ctx.fillStyle = 'pink'
         ctx.fill();
-        ctx.closePath();
+        ctx.stroke();
       }
     }
 }
+
+//-- PELOTA
+
+ctx.beginPath();
+  ctx.arc(205,350, 6, 0, 2 * Math.PI); 
+
+  ctx.fillStyle = 'black';
+  
+  
+  ctx.fill();
+ctx.closePath();
+
+
+let vidas = 5;
+let puntos = 0;
+let play_button = document.getElementById("play");
+let izq_button = document.getElementById("izq");
+let der_button = document.getElementById("der");
+
