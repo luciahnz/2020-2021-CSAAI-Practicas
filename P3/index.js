@@ -60,7 +60,7 @@ for (let i = 0; i < LADRILLO.F; i++) {
 
   //----- Dibujar la Bola
   ctx.beginPath();
-  ctx.fillStyle='white';
+  ctx.fillStyle='black';
 
   //-- x,y, anchura, altura
   ctx.rect( 200,bola_y, 10, 10);
@@ -69,17 +69,14 @@ for (let i = 0; i < LADRILLO.F; i++) {
   //-- Raqueta 
   ctx.beginPath();
     ctx.fillStyle='black';
-    ctx.rect(275, 450, 80, 10);
+    ctx.rect(275, 650, 80, 10);
     ctx.fill();
     
-
-
-
 
 ctx.beginPath();
 
 //------ PUNTOS
-ctx.font = "10px Arial";
+ctx.font = "80px Arial";
 ctx.fillStyle = "black";
 ctx.fillText("0", 275, 80);
 
@@ -125,4 +122,17 @@ sacar.onclick = () => {
   bola_y = 50;
   bola_vy = 6;
   console.log("Saque!");
+}
+
+//-- Retrollamada de las teclas
+window.onkeydown = (e) => {
+
+  //-- Según la tecla se hace una cosa u otra
+  switch (e.key) {
+
+    //-- Tecla ESPACIO: Saque
+    case " ":
+      bola_y = 50;
+      bola_vy = 6;
+  }
 }
