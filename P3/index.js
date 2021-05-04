@@ -54,6 +54,7 @@ for (let i = 0; i < LADRILLO.F; i++) {
         ctx.fillStyle = 'pink'
         ctx.fill();
         ctx.stroke();
+
       }
     }
 }
@@ -136,3 +137,4 @@ window.onkeydown = (e) => {
       bola_vy = 6;
   }
 }
+

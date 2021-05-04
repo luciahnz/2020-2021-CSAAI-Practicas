@@ -27,12 +27,12 @@ function draw() {
     //-- Constantes de los ladrillos
 const LADRILLO = {
   F: 6,  // Filas
-  C: 7,  // Columnas
-  w: 72,
+  C: 10,  // Columnas
+  w: 50,
   h: 35,
   padding: 10,
   visible: true,
-  invisible: false
+  
 };
 
 //-- Estructura de los ladrillos
@@ -49,7 +49,13 @@ for (let i = 0; i < LADRILLO.F; i++) {
         h: LADRILLO.h,
         padding: LADRILLO.padding,
         visible: LADRILLO.visible
+        
       };
+      if (bola_x >= ladrillos[i][j].x && bola_y >= ladrillos[i][j].y 
+        && ladrillos[i][j].visible){
+            // ladrillos[i][j].visible = false; //hace que el bloque desaparezzca cuando lo toca la bola
+            bola_vy = bola_vy * -1;
+      }
   }
 }
 
@@ -121,7 +127,7 @@ function animacion()
     bola_vy = -bola_vy;
   }
 
-  //-- Comprobar si hay colisión con la raqueta izquierda
+  //-- Comprobar si hay colisión con la raqueta 
   if (bola_y >= raq_y && bola_y <=(raq_y+50) &&
       bola_x >= raq_x && bola_x <=(raq_x+50)) {
     bola_vy = bola_vy * -1;
