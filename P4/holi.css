@@ -1,0 +1,28 @@
+body {
+  background-color: rgb(206, 47, 47);
+}
+
+
+ .cuadro{
+
+    width: 45%;
+    padding-left: -29px;
+    text-align: center; 
+    background-color: #20c88f;
+    margin-left: 60px;
+    border-radius: 70px;
+  }
+
+canvas{
+  width: 70%;
+  margin-bottom: 50px;
+}
+
+
+#imagesrc {
+
+  width: 70%;
+  margin: 20px;
+  margin-top: 50px;
+
+}

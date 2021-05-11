@@ -3,17 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Practica 4</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="holi.css">
     <script src="Index.js" defer></script>
   </head>
   <body>
     <h1>Editor de imagen </h1>
-    <div class="cuadro"></div>
+    <div class="cuadro">
       <img src="h2o.jpg" id="imagesrc">
       <canvas id="canvas"></canvas>
    </div>
 
       <br>
+      <div class="caja">
       <div id="deslizadores">
         <b >Rojo:</b>
         <input type="range" id="deslizadorRojo" min="0" max="255" value="255"/>
@@ -30,6 +31,7 @@
       <div id="boton">
         <button id="botonGris">GRIS</button>
         <button id="botonColor">COLOR</button>
+      </div>
       </div>
     </body>
   </html>
