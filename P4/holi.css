@@ -1,28 +1,24 @@
 body {
-  background-color: rgb(206, 47, 47);
+  background-color: rgba(230, 132, 132, 0.712);
 }
-
-
- .cuadro{
-
-    width: 45%;
-    padding-left: -29px;
-    text-align: center; 
-    background-color: #20c88f;
-    margin-left: 60px;
-    border-radius: 70px;
-  }
-
-canvas{
-  width: 70%;
-  margin-bottom: 50px;
+#cuadro{
+  
+  width: 50%;
+  margin-bottom: 38px;
+  margin-top: 9px;
+  text-align: center;
+  border: solid;
+  border-top-color: currentcolor;
+  border-right-color: currentcolor;
+  border-bottom-color: currentcolor;
+  border-left-color: currentcolor;
+  border-color: rgb(88, 86, 86);
+  background-color: #f3e6f4d1;
+  padding-inline-end: -16px;
+  padding-bottom: 45px;
 }
-
-
-#imagesrc {
-
-  width: 70%;
-  margin: 20px;
-  margin-top: 50px;
-
+#imagesrc{
+  
+  width: 65%;
+  padding-top: 50px;
 }

@@ -8,13 +8,17 @@
   </head>
   <body>
     <h1>Editor de imagen </h1>
-    <div class="cuadro">
-      <img src="h2o.jpg" id="imagesrc">
-      <canvas id="canvas"></canvas>
-   </div>
+    <div id="cuadro">
+      <div id="foto">
+        <img src="h3o.jpg" id="imagesrc">      
+      </div>
+      <div id="modificada"> 
+        <canvas id="canvas" width="1000" height="664" style="width: 65%;"></canvas>
+      </div>
+    </div>
 
       <br>
-      <div class="caja">
+      <div id="caja">
       <div id="deslizadores">
         <b >Rojo:</b>
         <input type="range" id="deslizadorRojo" min="0" max="255" value="255"/>
