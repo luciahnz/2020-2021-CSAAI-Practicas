@@ -18,9 +18,8 @@ const range_valueAzul = document.getElementById('range_valueAzul');
 
 img.onload = function () {
 
-  
-  canvas.width = img.width;
-  canvas.height = img.height;
+  canvas.width = 1000;
+  canvas.height = 600;
 
   ctx.drawImage(img, 0,0);
 
