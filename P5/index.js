@@ -13,12 +13,12 @@ const btn_src_on = document.getElementById("btn_src_on");
 //-- Establecer las dimensiones de los vídeos
 directo.width=420;
 directo.height=200;
-video1.width=200;  
-video1.height=100;
-video2.width=200;  
-video2.height=100;
-video3.width=200;  
-video3.height=100;
+video1.width=230;  
+video1.height=130;
+video2.width=230;  
+video2.height=130;
+video3.width=230;  
+video3.height=130;
 
 //-- Imagen de Test usada
 const TEST_IMAGE_URL = "test.png";
