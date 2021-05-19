@@ -106,10 +106,9 @@ botonColor.onclick = () => {
 }
 
 botonRestart.onclick = () => {
-  range_valueAzul = 255;
-  range_valueRojo = 255;
-  range_valueVerde = 255;
-  
+  deslizadorRojo.value = 255;
+  deslizadorVerde.value = 255;
+  deslizadorAzul.value = 255;
   ctx.drawImage(img, 0,0);
 }
 
