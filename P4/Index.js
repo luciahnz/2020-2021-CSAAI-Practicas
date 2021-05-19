@@ -102,7 +102,14 @@ botonColor.onclick = () => {
     deslizadorRojo.value = 255;
     deslizadorVerde.value = 255;
     deslizadorAzul.value = 255;
-    ctx.drawImage(img, 0,0);
+    
+}
+
+botonRestart.onclick = () => {
+  deslizadorRojo.value = 255;
+  deslizadorVerde.value = 255;
+  deslizadorAzul.value = 255;
+  ctx.drawImage(img, 0,0);
 }
 
 botonGris.onclick = () => {
