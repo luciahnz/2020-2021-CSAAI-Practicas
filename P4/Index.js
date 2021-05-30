@@ -26,7 +26,7 @@ img.onload = function () {
   console.log("Imagen lista...");
 };
 
-
+function Color(){
     ctx.drawImage(img, 0,0);
     //-- Funcion de retrollamada de los deslizadores
     
@@ -74,6 +74,7 @@ img.onload = function () {
       }
       ctx.putImageData(imgData, 0, 0);
     }
+  }
 
 // GRISES
 function Grises(){
@@ -91,8 +92,6 @@ function Grises(){
       data[i+2] = Gris;
     }
     ctx.putImageData(imgData, 0, 0);
-    document.getElementById('sliders').style.display = 'none';
-    document.getElementById('invertidores').style.display = 'none';
 }
 
 
@@ -101,22 +100,19 @@ function Grises(){
 // BOTONES
 
 botonColor.onclick = () => {
-    deslizadorRojo.value = 255;
-    deslizadorVerde.value = 255;
-    deslizadorAzul.value = 255;
+    Color()
     
 }
 
 botonRestart.onclick = () => {
-  document.getElementById('sliders').style.display = 'none';
-  document.getElementById('invertidores').style.display = 'none';
+  deslizadorRojo.value = 255;
+  deslizadorVerde.value = 255;
+  deslizadorAzul.value = 255;
   ctx.drawImage(img, 0,0);
 }
 
 botonGris.onclick = () => {
     Grises();
-    document.getElementById('sliders').style.display = 'none';
-    document.getElementById('invertidores').style.display = 'none';
 }
 
 
