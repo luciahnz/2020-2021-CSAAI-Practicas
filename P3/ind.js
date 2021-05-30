@@ -51,13 +51,17 @@ for (let i = 0; i < LADRILLO.F; i++) {
         visible: LADRILLO.visible
         
       };
-      if (bola_x >= ladrillos[i][j].x && bola_y >= ladrillos[i][j].y 
-        && ladrillos[i][j].visible){
-            // ladrillos[i][j].visible = false; //hace que el bloque desaparezzca cuando lo toca la bola
+       if(bola_x > ladrillos[i][j].x && bola_x < ladrillos[i][j].x+LADRILLO.w
+        && bola_y > ladrillos[i][j].y && bola_y < ladrillos[i][j].y+LADRILLO.h
+        ){
+            ladrillos[i][j].visible = false; //hace que el bloque desaparezzca cuando lo toca la bola
             bola_vy = bola_vy * -1;
       }
   }
+  
 }
+
+
 
 //--ladrillos[0][0].visible = false;
 
@@ -115,7 +119,6 @@ function animacion()
   raq_x += raq_v;
   
 
-  //-- Comprobar si la bola ha alcanzado el límite derecho
   //-- Si es así, se cambia de signo la velocidad, para
   // que "rebote" y vaya en el sentido opuesto
   if (bola_x < 0 || bola_x >= (canvas.width - 20) ) {
