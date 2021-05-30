@@ -29,7 +29,7 @@ img.onload = function () {
 
     ctx.drawImage(img, 0,0);
     //-- Funcion de retrollamada de los deslizadores
-    
+    function deslizadores(){
     deslizadorRojo.oninput = () => {
       //-- Mostrar el nuevo valor del deslizador
       range_valueRojo.innerHTML = deslizadorRojo.value;
@@ -58,7 +58,7 @@ img.onload = function () {
       let data = imgData.data
       ctx.putImageData(imgData, 0, 0);
     }
-
+  }
 
 // COLORES
     function Colores(data){
@@ -95,6 +95,7 @@ function Grises(){
       data[i+2] = Gris;
     }
     ctx.putImageData(imgData, 0, 0);
+    
 }
 
 
@@ -106,18 +107,19 @@ botonColor.onclick = () => {
     deslizadorRojo.value = 255;
     deslizadorVerde.value = 255;
     deslizadorAzul.value = 255;
+    deslizadores();
+    document.getElementById('deslizadores').style.display = 'block';
     
 }
 
 botonRestart.onclick = () => {
-  deslizadorRojo.value = 255;
-  deslizadorVerde.value = 255;
-  deslizadorAzul.value = 255;
+  document.getElementById('deslizadores').style.display = 'none';
   ctx.drawImage(img, 0,0);
 }
 
 botonGris.onclick = () => {
     Grises();
+    document.getElementById('deslizadores').style.display = 'none';
 }
 
 
