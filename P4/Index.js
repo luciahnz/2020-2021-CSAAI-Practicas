@@ -28,35 +28,6 @@ img.onload = function () {
 
 
     ctx.drawImage(img, 0,0);
-
-// GRISES
-function Grises(){
-    ctx.drawImage(img, 0,0);
-    let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    let data = imgData.data;
-
-    for (var i = 0; i < data.length; i+=4) {
-      Rojo = data[i];
-      Verde = data[i+1];
-      Azul = data[i+2];
-      Gris = (3 * Rojo + 4 * Verde + Azul)/8
-      data[i] = Gris;
-      data[i+1] = Gris;
-      data[i+2] = Gris;
-    }
-    ctx.putImageData(imgData, 0, 0);
-}
-
-
-
-
-// BOTONES
-
-botonColor.onclick = () => {
-    deslizadorRojo.value = 255;
-    deslizadorVerde.value = 255;
-    deslizadorAzul.value = 255;
-    
     //-- Funcion de retrollamada de los deslizadores
     
     deslizadorRojo.oninput = () => {
@@ -103,6 +74,37 @@ botonColor.onclick = () => {
       }
       ctx.putImageData(imgData, 0, 0);
     }
+
+// GRISES
+function Grises(){
+    ctx.drawImage(img, 0,0);
+    let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    let data = imgData.data;
+
+    for (var i = 0; i < data.length; i+=4) {
+      Rojo = data[i];
+      Verde = data[i+1];
+      Azul = data[i+2];
+      Gris = (3 * Rojo + 4 * Verde + Azul)/8
+      data[i] = Gris;
+      data[i+1] = Gris;
+      data[i+2] = Gris;
+    }
+    ctx.putImageData(imgData, 0, 0);
+    document.getElementById('sliders').style.display = 'none';
+    document.getElementById('invertidores').style.display = 'none';
+}
+
+
+
+
+// BOTONES
+
+botonColor.onclick = () => {
+    deslizadorRojo.value = 255;
+    deslizadorVerde.value = 255;
+    deslizadorAzul.value = 255;
+    
 }
 
 botonRestart.onclick = () => {
