@@ -97,15 +97,23 @@ function Grises(){
 }
 
 
-// INVERTIR
-function invertir(){
+// NEGATIVO
+function negativo(){
   ctx.drawImage(img, 0,0);
-  ctx.translate(2*(img.width)/2,0);
-  ctx.scale(-1,1);
-  ctx.drawImage(img, 0, 0);
+  let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  let data = imgData.data;
 
+  for ( var i = 0; i < data.length; i+=4 ) {
+    Rojo = data[i];
+    Verde = data[i+1];
+    Azul = data[i+2];
+
+      data[i] = 255 - Rojo;
+      data[i+1] = 255 - Verde;
+      data[i+2] = 255 - Azul;
+  }
+  ctx.putImageData( imgData, 0, 0 );
 }
-
 document.getElementById('deslizadores').style.display = 'none';
 
 // BOTONES
@@ -131,8 +139,8 @@ botonGris.onclick = () => {
   document.getElementById('deslizadores').style.display = 'none';
 }
 
-botonInvertir.onclick = () => {
-  invertir();
+botonNegativo.onclick = () => {
+  negativo();
   document.getElementById('deslizadores').style.display = 'none';
 }
 
