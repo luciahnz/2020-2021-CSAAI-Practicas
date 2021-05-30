@@ -30,6 +30,7 @@ img.onload = function () {
     ctx.drawImage(img, 0,0);
     //-- Funcion de retrollamada de los deslizadores
     function deslizadores(){
+
     deslizadorRojo.oninput = () => {
       //-- Mostrar el nuevo valor del deslizador
       range_valueRojo.innerHTML = deslizadorRojo.value;
@@ -39,6 +40,12 @@ img.onload = function () {
       let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
       //-- Obtener el array con todos los píxeles
       let data = imgData.data
+      //-- Obtener el umbral de la COMPONENTE ROJA del deslizador
+      umbralRojo = deslizadorRojo.value
+      for (let i = 0; i < data.length; i+=4) {
+        if (data[i] > umbralRojo)
+          data[i] = umbralRojo;
+      }
       //-- Poner la imagen modificada en el canvas
       ctx.putImageData(imgData, 0, 0);
     }
@@ -48,6 +55,11 @@ img.onload = function () {
       ctx.drawImage(img, 0,0);
       let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
       let data = imgData.data
+      umbralVerde = deslizadorVerde.value
+      for (let i = 0; i < data.length; i+=4) {
+        if (data[i+1] > umbralVerde)
+          data[i+1] = umbralVerde;
+      }
       ctx.putImageData(imgData, 0, 0);
     }
   
@@ -56,28 +68,15 @@ img.onload = function () {
       ctx.drawImage(img, 0,0);
       let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
       let data = imgData.data
+      umbralAzul = deslizadorAzul.value
+      for (let i = 0; i < data.length; i+=4) {
+        if (data[i+2] > umbralAzul)
+          data[i+2] = umbralAzul;
+      }
       ctx.putImageData(imgData, 0, 0);
     }
   }
-
-// COLORES
-    function Colores(data){
-      var umbralRojo = deslizadorRojo.value;
-      var umbralVerde = deslizadorVerde.value;
-      var umbralAzul = deslizadorAzul.value;
-      //-- Filtrar la imagen según el nuevo umbral
-      for (var i = 0; i < data.length; i+=4) {
-          if (data[i] > umbralRojo){
-            data[i] = umbralRojo;
-          }
-          if (data[i+1] > umbralVerde){
-            data[i+1] = umbralVerde;
-          }
-          if (data[i+2] > umbralAzul){
-            data[i+2] = umbralAzul;
-          }
-        }
-    }
+  
 
 // GRISES
 function Grises(){
@@ -95,7 +94,6 @@ function Grises(){
       data[i+2] = Gris;
     }
     ctx.putImageData(imgData, 0, 0);
-    
 }
 
 
@@ -103,23 +101,24 @@ function Grises(){
 
 // BOTONES
 
+
 botonColor.onclick = () => {
-    deslizadorRojo.value = 255;
-    deslizadorVerde.value = 255;
-    deslizadorAzul.value = 255;
-    deslizadores();
-    document.getElementById('deslizadores').style.display = 'block';
-    
+  deslizadorRojo.value = 255;
+  deslizadorVerde.value = 255;
+  deslizadorAzul.value = 255;
+  deslizadores();
+  document.getElementById('deslizadores').style.display = 'block';
+  
 }
 
 botonRestart.onclick = () => {
-  document.getElementById('deslizadores').style.display = 'none';
-  ctx.drawImage(img, 0,0);
+document.getElementById('deslizadores').style.display = 'none';
+ctx.drawImage(img, 0,0);
 }
 
 botonGris.onclick = () => {
-    Grises();
-    document.getElementById('deslizadores').style.display = 'none';
+  Grises();
+  document.getElementById('deslizadores').style.display = 'none';
 }
 
 
