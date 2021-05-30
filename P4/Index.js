@@ -25,9 +25,9 @@ img.onload = function () {
 
   console.log("Imagen lista...");
 };
-
+ctx.drawImage(img, 0,0);
 function Color(){
-    ctx.drawImage(img, 0,0);
+    
     //-- Funcion de retrollamada de los deslizadores
     
     deslizadorRojo.oninput = () => {
@@ -74,7 +74,7 @@ function Color(){
       }
       ctx.putImageData(imgData, 0, 0);
     }
-  }
+}
 
 // GRISES
 function Grises(){
