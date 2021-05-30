@@ -108,14 +108,15 @@ botonColor.onclick = () => {
 }
 
 botonRestart.onclick = () => {
-  deslizadorRojo.value = 255;
-  deslizadorVerde.value = 255;
-  deslizadorAzul.value = 255;
+  document.getElementById('sliders').style.display = 'none';
+  document.getElementById('invertidores').style.display = 'none';
   ctx.drawImage(img, 0,0);
 }
 
 botonGris.onclick = () => {
     Grises();
+    document.getElementById('sliders').style.display = 'none';
+    document.getElementById('invertidores').style.display = 'none';
 }
 
 
