@@ -97,7 +97,7 @@ function Grises(){
 }
 
 
-
+document.getElementById('deslizadores').style.display = 'none';
 
 // BOTONES
 
