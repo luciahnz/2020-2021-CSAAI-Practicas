@@ -97,6 +97,15 @@ function Grises(){
 }
 
 
+// INVERTIR
+function invertir(){
+  ctx.drawImage(img, 0,0);
+  ctx.translate(2*(img.width)/2,0);
+  ctx.scale(-1,1);
+  ctx.drawImage(img, 0, 0);
+
+}
+
 document.getElementById('deslizadores').style.display = 'none';
 
 // BOTONES
@@ -119,6 +128,11 @@ ctx.drawImage(img, 0,0);
 
 botonGris.onclick = () => {
   Grises();
+  document.getElementById('deslizadores').style.display = 'none';
+}
+
+botonInvertir.onclick = () => {
+  invertir();
   document.getElementById('deslizadores').style.display = 'none';
 }
 
