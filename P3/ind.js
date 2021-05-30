@@ -130,6 +130,13 @@ function animacion()
     bola_vy = -bola_vy;
   }
 
+  if (raq_x < 0 || raq_x >= (canvas.width - 20) ) {
+    //-- Hay colisión. Cambiar el signo de la bola
+    raq_x = raq_x * -1;
+  }
+  
+
+
   //-- Comprobar si hay colisión con la raqueta 
   if (bola_y >= raq_y && bola_y <=(raq_y+50) &&
       bola_x >= raq_x && bola_x <=(raq_x+50)) {
