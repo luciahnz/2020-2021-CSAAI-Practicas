@@ -103,6 +103,7 @@ function Grises(){
 
 
 botonColor.onclick = () => {
+  ctx.drawImage(img, 0,0);
   deslizadorRojo.value = 255;
   deslizadorVerde.value = 255;
   deslizadorAzul.value = 255;
