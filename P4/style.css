@@ -59,3 +59,14 @@ h1{
     margin-right: 170px;
     border-radius: 35px;
 }
+
+button{
+  margin-right: 12px;
+    margin-left: 13px;
+    padding: 15px; 
+    border: solid; 
+    border-color: rgb(62, 57, 57); 
+    background-color: #a8eaead1;
+    border-radius: 5px;
+    padding-inline-end: -16px;
+}
