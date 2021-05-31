@@ -34,7 +34,8 @@ const estado = {
   ini: 0,
   dig1: 1,
   signo: 2,
-  dig2: 3,
+  dig2_ini: 3,
+  dig2: 4,
 }
 
 let valor = estado.ini;
@@ -69,7 +70,7 @@ del.onclick = () => {
       valor = estado.ini;
     }else{
       display.innerHTML = display.innerHTML.substring(0, display.innerHTML.length - 1);
-    }   
+    }
   }
 
 
@@ -81,7 +82,12 @@ function digit(dig){
       display.innerHTML += dig.value;
     } else if (valor == estado.signo){
       display.innerHTML += dig.value;
+      valor = estado.dig2_ini;
+    } else if (valor == estado.dig2_ini){
+      display.innerHTML += dig.value;
       valor = estado.dig2;
+    } else if (valor == estado.dig2){
+      display.innerHTML += dig.value;
     }
 } 
 
