@@ -6,7 +6,7 @@ display = document.getElementById("display")
 igual = document.getElementById("igual")
 del = document.getElementById("del")
 clear = document.getElementById("clear")
-
+porcenta = document.getElementById("%")
 
 //-- Operación para detectar numero
 
@@ -72,7 +72,15 @@ del.onclick = () => {
       display.innerHTML = display.innerHTML.substring(0, display.innerHTML.length - 1);
     }
   }
-
+  
+  porcenta.onclick = () => {
+    if(display.innerHTML == "0"){
+      display.innerHTML = "0";
+      valor = estado.ini;
+    }else{
+      display.innerHTML = display.innerHTML/100;
+    }
+  }
 
 function digit(dig){
     if (valor == estado.ini) {
