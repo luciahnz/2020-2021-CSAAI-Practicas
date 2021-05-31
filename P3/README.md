@@ -1,1 +1,2 @@
  # Práctica 3
+La practica consta de el juego de bloques, para mover la raqueta puedes unar las teclas A o D, o puedes utilizar los botones. Si se te acaban las vidas pierdes. Cada vez que se toque un bloque se sumara un punto a tu puntuacion.
