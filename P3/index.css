@@ -11,7 +11,19 @@ canvas {
     /*! padding-right: 150px; */
   }
 
+p2{
+  
+  margin-left: 117px;
+  text-align: center;
+  font-size: 20px;
+}
 
+p3{
+  
+  margin-left: 34px;
+  text-align: center;
+  font-size: 20px;
+}
 
 
 .Imagen{
@@ -31,28 +43,82 @@ h1{
     margin-top: 0px;
  
     padding-bottom: -27px;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: -20px;
+    background-color: #ce5482;
+    font-family: inherit;
+    font-size: 42px;
+    color: #641e60;
 }
+
+p1{
+  text-align: center;
+font-size: 17px;
+}
+
+
 h2{
   text-align: center;
-  margin-bottom: 135px;
-  margin-top: -10px;
+  margin-top: 0px;
+  padding-top: -20px;
+  background-color: #ce5482;
+  font-family: inherit;
+  margin-left: -75px;
+  margin-right: 46px;
+  text-align: center;
+  font-size: 30px;
 }
 
 #Texto{
   
   background-color:pink;
-  width: 8%;
-  padding: 43px;
+  width: 18%;
+  padding: 75px;
   border: solid; 
   border-color: rgb(88, 86, 86);
   float: right;
-  margin-right: 90px;
+  /*! margin-right: 0px; */
    
-  padding-bottom: 0px;
+  /*! padding-bottom: 0px; */
   border-radius: 30px;
   margin-top: 30px;
 }
 
 body{
   background-color: rgb(162, 167, 247);
+}
+
+#sacar{
+    margin-right: 12px;
+    margin-left: 85px;
+    padding: 15px; 
+    border: solid; 
+    border-color: rgb(62, 57, 57); 
+    background-color: #ce5482;
+    border-radius: 5px;
+    padding-inline-end: -16px;
+}
+
+#izq{
+    margin-right: 12px;
+    margin-left: 20px;
+    padding: 15px; 
+    border: solid; 
+    border-color: rgb(62, 57, 57); 
+    background-color: #ce5482;
+    border-radius: 5px;
+    padding-inline-end: -16px;
+    text-align: center;
+    /*! font-size: 14px; */
+}
+#der{
+    margin-right: 12px;
+    margin-left: 15px;
+    padding: 15px; 
+    border: solid; 
+    border-color: rgb(62, 57, 57); 
+    background-color: #ce5482;
+    border-radius: 5px;
+    padding-inline-end: -16px;
 }

@@ -21,6 +21,11 @@ let raq_x = 300;
 let raq_y = 600;
 let raq_v = 0;  //-- Velocidad
 
+//-- PUNTOS
+let puntos = 0;
+
+//-- VIDAS
+let vidas = 3;
 //-- Pintar todos los objetos en el canvas
 function draw() {
 
@@ -51,12 +56,16 @@ for (let i = 0; i < LADRILLO.F; i++) {
         visible: LADRILLO.visible
         
       };
-       if(bola_x > ladrillos[i][j].x && bola_x < ladrillos[i][j].x+LADRILLO.w
+    if(ladrillos[i][j].visible = true) {
+      if(bola_x > ladrillos[i][j].x && bola_x < ladrillos[i][j].x+LADRILLO.w
         && bola_y > ladrillos[i][j].y && bola_y < ladrillos[i][j].y+LADRILLO.h
         ){
             ladrillos[i][j].visible = false; //hace que el bloque desaparezzca cuando lo toca la bola
             bola_vy = bola_vy * -1;
+            puntos++;
+            
       }
+    }    
   }
   
 }
@@ -71,13 +80,15 @@ for (let i = 0; i < LADRILLO.F; i++) {
   for (let j = 0; j < LADRILLO.C; j++) {
 
     //-- Si el ladrillo es visible se pinta
-    if (ladrillos[i][j].visible) {
+    if (ladrillos[i][j].visible == true) {
       ctx.beginPath();
       ctx.rect(ladrillos[i][j].x, ladrillos[i][j].y, LADRILLO.w, LADRILLO.h);
       ctx.fillStyle = 'pink'
       ctx.fill();
       ctx.stroke();
+    
     }
+    
   }
 }
 
@@ -104,9 +115,14 @@ for (let i = 0; i < LADRILLO.F; i++) {
 
 
 //------ PUNTOS
-ctx.font = "80px Arial";
+ctx.font = "25px Arial";
 ctx.fillStyle = "black";
-ctx.fillText("0", 275, 80);
+ctx.fillText("Puntos "+puntos, 450, 670);
+
+//------ VIDAS
+ctx.font = "25px Arial";
+ctx.fillStyle = "black";
+ctx.fillText("Vidas: "+vidas, 450, 640);
 
 }
 //---- Bucle principal de la animación
@@ -127,8 +143,17 @@ function animacion()
   }
   //-- Condición de rebote en extremos horizontales del canvas
   if (bola_y <= 0 || bola_y > 680) {
-    bola_vy = -bola_vy;
+    bola_x = 300;
+    bola_y = 300;
+    vidas = vidas - 1 ;
+    if (vidas == 0){
+      alert("FIN DE LA PARTIDA :(");
+    document.location.reload();
+    }
   }
+
+  
+
 
   if (raq_x < 0 || raq_x >= (canvas.width - 20) ) {
     //-- Hay colisión. Cambiar el signo de la bola
@@ -176,9 +201,21 @@ sacar.onclick = () => {
   bola_y = 300;
   bola_vx = 4;
   bola_vy = 4;
-  console.log("Saque!");
+  console.log("Saque");
 }
 
+izq.onclick = () => {
+  raq_v = -6;
+  
+  console.log("Izquierda");
+}
+
+
+der.onclick = () => {
+  raq_v = 6;
+  
+  console.log("Derecha");
+}
 //-- Retrollamada de las teclas
 window.onkeydown = (e) => {
 
