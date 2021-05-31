@@ -1,7 +1,9 @@
 console.log("Ejecutando JS...");
+console.log(funciones)
+console.log(digitos)
+
 
 display = document.getElementById("display")
-suma = document.getElementById("suma")
 igual = document.getElementById("igual")
 del = document.getElementById("del")
 clear = document.getElementById("clear")
@@ -11,25 +13,24 @@ clear = document.getElementById("clear")
 
 let digitos=document.getElementsByClassName("digito")
 
-for(i = 0; i < digitos.length; i++){
-  digitos[i].onclick = (ev) =>{
-    digito(ev.target);
-  }
-}
 
 
 //-- Operación de sumar, restar, multiplicar y dividir
 let funciones=document.getElementsByClassName("funcion")
 
-for(i = 0; i < funciones.length; i++){
-  funciones[i].onclick = (ev) =>{
-    display.innerHTML += ev.target.value;
-  }
+
+const estado = {
+  ini: 0,
+  dig1: 1,
+  signo: 2,
+  dig2_ini: 3,
+  dig2: 4,
 }
 
+let estados = estado.ini;
 
 //-- Operación operar con numero
-function digito(num)
+function numerico(num)
 {
   if(display.innerHTML == "0"){
     display.innerHTML = num.value;
@@ -38,7 +39,23 @@ function digito(num)
   }
 }
 
-//-- Evaluar la expresion
+
+
+for(i = 0; i < digitos.length; i++){
+  digitos[i].onclick = (ev) =>{
+    digit(ev.target);
+  }
+}
+
+for(i = 0; i < funciones.length; i++){
+  funciones[i].onclick = (ev) =>{
+    funcion(ev.target);
+  }
+}
+
+
+
+
 igual.onclick = () => {
   display.innerHTML = eval(display.innerHTML);
 }
@@ -47,13 +64,42 @@ igual.onclick = () => {
 //-- Poner a cero la expresion
 clear.onclick = () => {
   display.innerHTML = "0";
+  estados = estado.ini;
 }
 
 //-- Para poder borrar
 del.onclick = () => {
     if(display.innerHTML == "0"){
       display.innerHTML = "0";
+      estados = estado.ini;
     }else{
       display.innerHTML = display.innerHTML.substring(0, display.innerHTML.length - 1);
     }
   }
+
+
+function digit(dig){
+    if (estados == estado.ini) {
+      display.innerHTML = dig.value;
+      estados = estado.dig1;
+    } else if (estados == estado.dig1){
+      display.innerHTML += dig.value;
+    } else if (estados == estado.signo){
+      display.innerHTML += dig.value;
+      estados = estado.dig2_ini;
+    } else if (estados == estado.dig2_ini){
+      display.innerHTML += dig.value;
+      estados = estado.dig2;
+    } else if (estados == estado.dig2){
+      display.innerHTML += dig.value;
+    }
+} 
+
+function funcion (sig)
+{
+  //-- Segun el estado hacemos una cosa u otra
+  if (estados != estado.signo){
+    display.innerHTML += sig.value;
+    estados = estado.signo;
+  }
+}
