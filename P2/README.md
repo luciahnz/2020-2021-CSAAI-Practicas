@@ -1,4 +1,16 @@
  # Práctica 2
+
+Bienvenido a la calculadora
+
+https://luciahnz.github.io/2020-2021-CSAAI-Practicas/P2/
+
 Funcionamiento de la Calculadora:
-Para poder utilizar la calculadora pulsa un numero + "un operador" + "un numero" y despues dale al igual. La calculadora resolvera tu funcion.
-Si te equivocas puedes pulsar el boton del que borrara el ultimo elemento pulsado y si no pulsa AC para comenzar de nuevo.
+
+Pulsa un numero/s.
+Pulsa un operador.
+Pulsa otro numero/s.
+Dale al igual, ¡y obtedrás tu operación!
+Si te equivocas puedes pulsar el boton 'DEL' que borrara el ultimo elemento pulsado 
+Pulsa AC para comenzar de nuevo.
+Pulsa % para calcular el porcentaje
+Pulsa . para poner un numero decimal
